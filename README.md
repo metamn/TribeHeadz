@@ -12,7 +12,12 @@
 
 ## Tests
 
-- only Rails code was tested, the import/seed script was not
+- only Rails code was tested, the import/seed script was skipped
 - shoulda was used in unit tests
+
+
+## Documentation
+
+- using TomDoc 
 
 
