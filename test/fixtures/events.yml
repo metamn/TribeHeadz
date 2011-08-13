@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  date: 2011-08-13
+  time: 2011-08-13 14:28:41
+  flyer: MyString
+
+two:
+  name: MyString
+  date: 2011-08-13
+  time: 2011-08-13 14:28:41
+  flyer: MyString
