@@ -10,12 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110813113833) do
+ActiveRecord::Schema.define(:version => 20110814105852) do
 
   create_table "djs", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gigs"
+  end
+
+  create_table "djs_events", :id => false, :force => true do |t|
+    t.integer "dj_id"
+    t.integer "event_id"
+  end
+
+  create_table "djs_styles", :id => false, :force => true do |t|
+    t.integer "dj_id"
+    t.integer "style_id"
   end
 
   create_table "events", :force => true do |t|
@@ -27,10 +38,16 @@ ActiveRecord::Schema.define(:version => 20110813113833) do
     t.datetime "updated_at"
   end
 
+  create_table "events_styles", :id => false, :force => true do |t|
+    t.integer "style_id"
+    t.integer "event_id"
+  end
+
   create_table "styles", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "popularity"
   end
 
 end

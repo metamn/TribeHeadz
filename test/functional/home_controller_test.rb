@@ -7,8 +7,10 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "index should get top DJs" do
+  test "should get top music styles" do
     get :index
     assert_not_nil assigns(:top)
   end
+  
+  
 end

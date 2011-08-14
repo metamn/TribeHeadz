@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @top = 'a'
+    @top = Style.top.map {|s| s.name }
   end
 
 end
