@@ -105,17 +105,17 @@ class Import
       name = item.at('name').innerHTML
       event = Event.find_by_name name
       
-      #puts "Connecting Events and DJs"
+      puts "Connecting Events and DJs"
       lineup = item.at('lineup').innerHTML
-      #lineup.split(',').each do |dj|
-      #  event.djs << Dj.find_by_name(dj)
-      #end
+      lineup.split(',').each do |dj|
+        event.djs << Dj.find_by_name(dj)
+      end
       
-      #puts "Connecting Events and Styles"
+      puts "Connecting Events and Styles"
       styles = item.at('music').innerHTML
-      #styles.split(',').each do |style|
-      #  event.styles << Style.find_by_name(style)
-      #end
+      styles.split(',').each do |style|
+        event.styles << Style.find_by_name(style)
+      end
       
       puts "Connecting DJs and Styles"
       lineup.split(',').each do |dj|

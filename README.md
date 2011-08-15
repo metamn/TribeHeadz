@@ -1,7 +1,7 @@
 ## TribeHeadz
 
-- Who are the most active DJs?
 - Which music styles are the most popular?
+- Who are the most active DJs?
 - Which event one should attend?
 
 ## Setup & Usage
@@ -13,7 +13,7 @@
 ## Tests
 
 - only Rails code was tested, the import/seed script was skipped
-- shoulda was used in unit tests
+- shoulda was used in unit tests, capybara in integration tests
 
 
 ## Documentation

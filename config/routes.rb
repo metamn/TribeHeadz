@@ -1,7 +1,15 @@
 Betribes::Application.routes.draw do
-  get "home/index"
+  root :to => "styles#index"
   
-  root :to => "home#index"
+  resources :events, :only => [:index, :show]
+  
+  resources :styles, :only => [:index] do
+    resources :djs, :only => [:index]
+  end
+  
+  resources :djs, :only => [:index] do
+    resources :events, :only => [:index]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
