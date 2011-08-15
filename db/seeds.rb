@@ -127,7 +127,6 @@ class Import
     end
   end
   
-  
 end
 
 
@@ -135,5 +134,5 @@ end
 
 
 i = Import.new
-#i.parse
+i.parse
 i.sync

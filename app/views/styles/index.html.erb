@@ -5,3 +5,7 @@
     <li><%= link_to "#{style.name} (#{style.popularity} djs)", style_djs_path(style) %></li>
   <% end %>
 </ul>
+
+<% if @top.blank? %>
+  Please populate the database first with 'rake db:seed'
+<% end %>

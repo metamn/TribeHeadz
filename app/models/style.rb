@@ -5,7 +5,8 @@ class Style < ActiveRecord::Base
   has_and_belongs_to_many :djs
   has_and_belongs_to_many :events
   
-  # Returns the top 10 music styles based on popularity
+  
+  # Getting the top 10 music styles based on popularity
   #
   # Returns a set of 10 records
   def self.top

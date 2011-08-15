@@ -47,4 +47,6 @@ class ApplicationTest < ActionDispatch::IntegrationTest
     visit style_djs_url(styles(:one).id)
     assert page.has_content?('('), 'Total number of gigs per DJ is missing'
   end
+  
+  
 end
