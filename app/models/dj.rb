@@ -6,6 +6,6 @@ class Dj < ActiveRecord::Base
   has_and_belongs_to_many :events
   
   def self.top
-    self.order("gigs DESC").limit(10)
+    limit(10)
   end
 end

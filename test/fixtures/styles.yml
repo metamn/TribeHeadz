@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: Style1
+  djs: [1]
 
 two:
-  name: MyString
+  name: Style2
+  djs: [2]

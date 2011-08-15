@@ -1,4 +1,6 @@
 Betribes::Application.routes.draw do
+  get "djs/index"
+
   get "styles/index"
 
   get "style/index"

@@ -21,3 +21,10 @@
 - using TomDoc 
 
 
+## The Design/Coding Process
+
+- first the DB was created through seeding
+- then the URL structure was mapped to resources
+- then resources were created with the test-first, top-bottom approach: integration > functional > unit tests
+
+

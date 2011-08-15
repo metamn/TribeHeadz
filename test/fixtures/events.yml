@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: Event1
   date: 2011-08-13
   time: 2011-08-13 14:28:41
-  flyer: MyString
+  flyer: Flyer1
 
 two:
-  name: MyString
+  name: Event2
   date: 2011-08-13
   time: 2011-08-13 14:28:41
-  flyer: MyString
+  flyer: Flyer2
