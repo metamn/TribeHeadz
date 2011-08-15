@@ -1,4 +1,8 @@
 Betribes::Application.routes.draw do
+  get "styles/index"
+
+  get "style/index"
+
   root :to => "styles#index"
   
   resources :events, :only => [:index, :show]

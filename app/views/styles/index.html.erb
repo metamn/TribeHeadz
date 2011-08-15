@@ -1,0 +1,7 @@
+<h2>Choose your style</h2>
+
+<ul>
+  <% for style in @top %>
+    <li><%= link_to style.name, style_djs_path(style) %></li>
+  <% end %>
+</ul
