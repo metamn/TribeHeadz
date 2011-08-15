@@ -1,4 +1,8 @@
 Betribes::Application.routes.draw do
+  get "events/index"
+
+  get "events/show"
+
   get "djs/index"
 
   get "styles/index"

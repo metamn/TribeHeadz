@@ -20,4 +20,16 @@ class UrlTest < ActionDispatch::IntegrationTest
     click_link "Style1"
     assert page.has_content?('Dj'), "No DJs for a music style"
   end
+  
+  test "Clicking on a DJ must list gigs/events" do
+    visit style_djs_url(styles(:one).id)
+    click_link "Dj1"
+    assert page.has_content?('Events'), "No events for a dj"
+  end
+  
+  test "Clicking on an event should display a flyer" do
+    visit dj_events_url djs(:one).id
+    click_link 'Event1'
+    assert page.has_content?('<img>'), "No flyer for an event"
+  end
 end

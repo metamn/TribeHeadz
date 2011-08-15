@@ -2,6 +2,8 @@
 
 one:
   name: Dj1
+  events: one
 
 two:
   name: Dj2
+  events: two

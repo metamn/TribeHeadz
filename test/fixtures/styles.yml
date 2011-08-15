@@ -2,8 +2,8 @@
 
 one:
   name: Style1
-  djs: [1]
+  djs: one
 
 two:
   name: Style2
-  djs: [2]
+  djs: two

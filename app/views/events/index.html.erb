@@ -1,0 +1,7 @@
+<h2>Gigs for <%= @dj.name %></h2>
+
+<ul>
+  <% for event in @events %>
+    <li><%= link_to event.name, event_url(event) %></li>
+  <% end %>
+</ul>
