@@ -1,7 +1,7 @@
 <h2>Choose your style</h2>
 
-<ul>
+<ul id="styles">
   <% for style in @top %>
-    <li><%= link_to style.name, style_djs_path(style) %></li>
+    <li><%= link_to "#{style.name} (#{style.popularity} djs)", style_djs_path(style) %></li>
   <% end %>
-</ul
+</ul>

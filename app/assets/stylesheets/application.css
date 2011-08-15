@@ -5,3 +5,31 @@
  *= require_self
  *= require_tree . 
 */
+
+body {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: .625em;
+}
+
+#events li {
+  margin-bottom: 5em;
+}
+
+img {
+  max-width: 60em;
+  height: auto;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: gray;
+}

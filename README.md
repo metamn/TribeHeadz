@@ -26,5 +26,10 @@
 - first the DB was created through seeding
 - then the URL structure was mapped to resources
 - then resources were created with the test-first, top-bottom approach: integration > functional > unit tests
+- then design
+- then refactoring
 
 
+## Hackz
+
+- could not configure the asset pipeline so symlinked assets/application.css to /public

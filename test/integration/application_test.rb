@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'capybara/rails'
 
-class UrlTest < ActionDispatch::IntegrationTest
+class ApplicationTest < ActionDispatch::IntegrationTest
   include Capybara
   fixtures :all
   
@@ -24,12 +24,27 @@ class UrlTest < ActionDispatch::IntegrationTest
   test "Clicking on a DJ must list gigs/events" do
     visit style_djs_url(styles(:one).id)
     click_link "Dj1"
-    assert page.has_content?('Gigs'), "No events for a dj"
+    assert page.has_content?('gigs'), "No events for a dj"
   end
   
   test "Clicking on an event should display a flyer" do
-    visit dj_events_url(djs(:one).id)
+    visit dj_events_url(djs(:one).id, :style => styles(:one).id)
     click_link 'Event1'
     assert page.has_selector?('img'), "No flyer for an event"
+  end
+  
+  test "Listing gigs/events must show the flyer too" do
+    visit dj_events_url(djs(:one).id, :style => styles(:one).id)
+    assert page.has_selector?('img'), "No flyer for an event"  
+  end
+  
+  test "When listing music styles the associated nr. of total DJs must be shown" do
+    visit "/"
+    assert page.has_content?('('), 'Total number of DJs per music style is missing'
+  end
+  
+  test "When listing DJs the number of gigs a DJ has must be shown too" do
+    visit style_djs_url(styles(:one).id)
+    assert page.has_content?('('), 'Total number of gigs per DJ is missing'
   end
 end

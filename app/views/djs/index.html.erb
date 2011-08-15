@@ -1,7 +1,7 @@
 <h2>Top <%= @style.name %> DJs</h2>
 
-<ul>
+<ul id="djs">
   <% for dj in @djs %>
-    <li><%= link_to dj.name, dj_events_url(dj) %></li>
+    <li><%= link_to "#{dj.name} (#{dj.gigs} events)", dj_events_url(dj, :style => @style.id) %></li>
   <% end %>
 </ul>

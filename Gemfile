@@ -19,7 +19,6 @@ gem 'therubyracer'
 
 gem 'hpricot'
 
-
 # Use unicorn as the web server
 # gem 'unicorn'
 

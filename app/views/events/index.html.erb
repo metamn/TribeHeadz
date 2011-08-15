@@ -1,7 +1,10 @@
-<h2>Gigs for <%= @dj.name %></h2>
+<h2><%= link_to @style.name, styles_url %> gigs for <%= @dj.name %></h2>
 
-<ul>
+<ul id="events">
   <% for event in @events %>
-    <li><%= link_to event.name, event_url(event) %></li>
+    <li>
+      <h3><%= link_to event.name, event_url(event) %></h3>
+      <%= image_tag event.flyer %>
+    </li>
   <% end %>
 </ul>
